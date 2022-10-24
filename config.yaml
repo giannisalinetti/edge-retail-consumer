@@ -1,0 +1,9 @@
+---
+bootstrap-servers: "rh-summit-cdbcno-om-e-i---m-dg.bf2.kafka.rhcloud.com:443"
+group-id: "retail-store"
+auto-offset-reset: "earliest"
+security-protocol: "sasl_ssl"
+sasl-mechanisms: "PLAIN"
+sasl-username: "8efb13d6-8a0d-41fe-ba90-f9101270dbcc"
+sasl-password: "X8VwUUz8VHahOJOe6xFPKb125XueRhox"
+topic: "pickup"

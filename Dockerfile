@@ -8,4 +8,5 @@ RUN go build .
 FROM registry.access.redhat.com/ubi8/ubi-minimal
 
 COPY --from=builder /app/edge-retail-consumer /
-CMD ["/edge-retail-consumer"]
+
+CMD ["/edge-retail-consumer", "-help"]
