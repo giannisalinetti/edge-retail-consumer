@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-retail-consumer
+spec:
+  template:
+    spec:
+      containers:
+      - name: edge-retail-consumer
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128M
+          requests:
+            cpu: 25m
+            memory: 32M

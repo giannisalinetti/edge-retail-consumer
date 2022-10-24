@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: edge-retail-consumer
+  name: edge-retail-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-retail-consumer
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: edge-retail-consumer
+    spec:
+      containers:
+      - command:
+        - /edge-retail-consumer
+        args:
+        - -config
+        - /consumer-cfg/config.yaml
+        image: edge-retail-consumer
+        imagePullPolicy: Always
+        name: edge-retail-consumer
+        resources:
+          limits:
+            cpu: 50m
+            memory: 64M
+          requests:
+            cpu: 50m
+            memory: 64M
+        volumeMounts:
+          - mountPath: /consumer-cfg
+            name: kafka-config
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      volumes:
+      - configMap:
+          defaultMode: 0640
+          name: kafka-configmap
+        name: kafka-config
+
