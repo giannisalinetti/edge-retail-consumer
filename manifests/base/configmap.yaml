@@ -2,13 +2,13 @@ apiVersion: v1
 data:
   config.yaml: |-
     ---
-    bootstrap-servers: "rh-summit-cdbcno-om-e-i---m-dg.bf2.kafka.rhcloud.com:443"
-    group-id: "retail-store"
+    bootstrap-servers: "rh-summit-cdcjli-j-icd-sb-es-a.bf2.kafka.rhcloud.com:443"
+    group-id: "pickup"
     auto-offset-reset: "earliest"
     security-protocol: "sasl_ssl"
     sasl-mechanisms: "PLAIN"
-    sasl-username: "8efb13d6-8a0d-41fe-ba90-f9101270dbcc"
-    sasl-password: "X8VwUUz8VHahOJOe6xFPKb125XueRhox"
+    sasl-username: "fa190c88-9f7b-4063-91ae-75a621a38b49"
+    sasl-password: "yFcvNqEhv13TzL6299sRV2yzjhq8bEUC"
     topic: "pickup"
 kind: ConfigMap
 metadata:
