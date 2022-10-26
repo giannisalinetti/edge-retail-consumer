@@ -2,8 +2,9 @@ FROM registry.redhat.io/rhel8/go-toolset:1.17.12-3.1661802325 as builder
 
 WORKDIR /app
 USER root
-COPY . .
-RUN go build .
+COPY main.go go.mod go.sum .
+COPY pkg ./pkg
+RUN go build -a -v ./...
 
 FROM registry.access.redhat.com/ubi8/ubi-minimal
 

@@ -4,6 +4,7 @@ metadata:
   labels:
     app: edge-retail-consumer
   name: edge-retail-consumer
+  namespace: pickup-management
 spec:
   replicas: 1
   selector:

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: edge-retail-consumer
+  namespace: pickup-management
 spec:
   template:
     spec:
@@ -9,8 +10,8 @@ spec:
       - name: edge-retail-consumer
         resources:
           limits:
-            cpu: 100m
-            memory: 128M
+            cpu: 250m
+            memory: 256M
           requests:
-            cpu: 25m
+            cpu: 50m
             memory: 32M

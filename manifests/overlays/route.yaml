@@ -1,0 +1,7 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: edge-retail-consumer
+  namespace: pickup-management
+spec:
+  host: edge-retail-consumer.apps.ztp-sno.edge.xotama.com

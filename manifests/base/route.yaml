@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: edge-retail-consumer
+  name: edge-retail-consumer
+  namespace: pickup-management
+spec:
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: edge-retail-consumer
+    weight: 100
+  wildcardPolicy: None
