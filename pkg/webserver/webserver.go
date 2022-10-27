@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-var MessageMap = make(map[string][]byte)
+var MessageMap = make(map[string]string)
 
 func orders(w http.ResponseWriter, r *http.Request) {
 

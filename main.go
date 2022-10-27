@@ -96,7 +96,7 @@ func main() {
 
 		log.Printf("Key: %s, Message: %s\n", string(msg.Key), string(msg.Value))
 
-		webserver.MessageMap[string(msg.Key)] = msg.Value
+		webserver.MessageMap[string(msg.Key)] = string(msg.Value)
 	}
 
 }

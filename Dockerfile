@@ -4,7 +4,7 @@ WORKDIR /app
 USER root
 COPY main.go go.mod go.sum .
 COPY pkg ./pkg
-RUN go build -a -v ./...
+RUN go build .
 
 FROM registry.access.redhat.com/ubi8/ubi-minimal
 
