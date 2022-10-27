@@ -1,9 +1,9 @@
 ---
-bootstrap-servers: "rh-summit-cdcjli-j-icd-sb-es-a.bf2.kafka.rhcloud.com:443"
+bootstrap-servers: "rh-summit-cdd-p-e--ijauqg--f-g.bf2.kafka.rhcloud.com:443"
 group-id: "pickup"
 auto-offset-reset: "earliest"
 security-protocol: "sasl_ssl"
 sasl-mechanisms: "PLAIN"
-sasl-username: "fa190c88-9f7b-4063-91ae-75a621a38b49"
-sasl-password: "yFcvNqEhv13TzL6299sRV2yzjhq8bEUC"
+sasl-username: "9e667cac-1689-4e55-8f19-4e4de841f6b7"
+sasl-password: "u2T8AUBusFih0rJmjLWVniy3fK8hztm8"
 topic: "pickup"
