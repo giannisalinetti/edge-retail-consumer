@@ -69,6 +69,7 @@ func main() {
 
 	// Subscribe target topic(s)
 	c.Subscribe(topic, nil)
+	defer c.Close()
 
 	// Collect broker metadata
 	meta, err := c.GetMetadata(&topic, true, -1)
